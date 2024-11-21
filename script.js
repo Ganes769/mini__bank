@@ -188,7 +188,7 @@ const calcDisplaySummery = function (acc) {
     .filter(acc => acc > 0)
     .map(mov => mov * acc.interestRate)
     .reduce((acc, cur) => acc + cur, 0);
-  labelSumInterest.textContent = `${interest} EUR`;
+  labelSumInterest.textContent = `${Math.abs(interest)} EUR`;
 };
 createuserBtn.addEventListener('click', function (e) {
   e.preventDefault();
